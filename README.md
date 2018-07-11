@@ -6,7 +6,7 @@ Pytorch Implementation of the MobileNet Architecture
   - [x] MobileNet v2
   - [ ] Comparisons on CIFAR-10
   - [ ] Trainig Phases
-  - [ ] Training Plots with Visdom
+  - [x] Training Plots with Visdom
   - [ ] 1cycle Policy
 
 ## Acknowledgements:
