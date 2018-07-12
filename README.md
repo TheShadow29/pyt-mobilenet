@@ -8,6 +8,7 @@ Pytorch Implementation of the MobileNet Architecture
   - [ ] Trainig Phases
   - [x] Training Plots with Visdom
   - [ ] 1cycle Policy
+  - [ ] Siamese Nets / Triplet Loss / Magnet Loss
 
 ## Acknowledgements:
 Thanks to https://github.com/kuangliu/pytorch-cifar for his amazing repository and mobilenetv1 and mobilenetv2 implementations. Progress bar is implemented as I have wrapped around the fastai library. Exhaustive comparisons on cifar10 is remaining at the moment. Pre-trained models will be available soon.
