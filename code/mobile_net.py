@@ -67,3 +67,10 @@ class mblnetv1(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.linear(out)
         return F.log_softmax(out, dim=-1)
+    
+    def emb_out(self, inp):
+        out = F.relu(self.bn1(self.conv1(inp)))
+        out = self.lyrs(out)
+        out = F.adaptive_avg_pool2d(out, 1)
+        out = out.view(out.size(0), -1)
+        return out
