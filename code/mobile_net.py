@@ -29,13 +29,14 @@ class visdom_callback(Callback):
     def on_epoch_end(self, metrics):
         self.num_epochs += 1
         self.train_loss_plot()
-        self.val_loss_plot(metrics)        
+        self.val_loss_plot(metrics)
                       
     def train_loss_plot(self):
         self.vis.plot('train', 'train_loss', self.num_epochs, self.deb_loss)
     
     def val_loss_plot(self, metrics):
         self.vis.plot('train', 'val_loss', self.num_epochs, metrics[0])
+        self.vis.plot('train', 'val_acc', self.num_epochs, metrics[1])
 
 class VisdomLinePlotter(object):
     """Plots to Visdom"""
