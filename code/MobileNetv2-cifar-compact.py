@@ -81,5 +81,7 @@ visc = visdom_callback(visl)
 # In[ ]:
 
 
-learn.fit(1e-1, 1, wds=1e-4, cycle_len=30, use_clr_beta=(20,20,0.95,0.85), callbacks=[visc],
-          best_save_name='best_compact_mbnetv2_clrb_1')
+# learn.fit(1e-1, 1, wds=1e-4, cycle_len=30, use_clr_beta=(20,20,0.95,0.85), callbacks=[visc],
+#           best_save_name='best_compact_mbnetv2_clrb_1')
+
+learn.fit(1e-1, 10, cycle_len=1, cycle_mult=2, callbacks=[visc], best_save_name='best_cmp_mbnet_v2_cosan1')
